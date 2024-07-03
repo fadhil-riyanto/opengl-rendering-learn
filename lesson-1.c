@@ -21,6 +21,11 @@ static void detect_input(GLFWwindow *window) {
     }
 } 
 
+static void renderColor() {
+    glClearColor(255, 100, 0, 0);
+}
+
+
 int main() {
     glfwInit();
     glfwWindowHint (GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -54,7 +59,8 @@ int main() {
         detect_input(window);
 
         // render test
-        glClearColor(255, 0, 0, 0);
+        renderColor();
+        
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);
         glfwPollEvents();
