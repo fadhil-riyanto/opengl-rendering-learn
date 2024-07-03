@@ -52,6 +52,10 @@ int main() {
     // run the eventloop
     while(!glfwWindowShouldClose(window)) {
         detect_input(window);
+
+        // render test
+        glClearColor(255, 0, 0, 0);
+        glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
