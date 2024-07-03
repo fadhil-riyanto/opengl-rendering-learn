@@ -49,7 +49,7 @@ int main() {
     }
 
 
-    glfwTerminate();
+    defer_on_exit();
     return 0;
 }
 
